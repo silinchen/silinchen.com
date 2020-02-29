@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex 布局</title>
+</head>
+<body>
+  <div class="container">
+    <div class="item">元素一</div>
+    <div class="item">元素二</div>
+    <div class="item">元素三</div>
+    <div class="item">元素四</div>
+    <!-- <div class="item">元素五</div> -->
+    <!-- <div class="item six">元素六</div> -->
+    <!-- <div class="item seven">元素七</div> -->
+    <!-- <div class="item eight">元素八</div> -->
+    <!-- <div class="item night">元素九</div> -->
+    <!-- <div class="item">...</div> -->
+  </div>
+  <style>
+    .container {
+      border: 1px dashed #666666;
+      margin: 100px auto;
+      display: flex;
+      width: 240px;
+      height: 180px;
+      text-align: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      /* flex-flow: column wrap; */
+      justify-content: space-between;
+      /* align-items: flex-start; */
+      /* align-content: stretch; */
+    }
+    .container::after,
+    .container::before {
+      content: '';
+      display: block;
+    }
+    .item {
+      width: 50px;
+      line-height: 50px;
+      height: 50px;
+    }
+    .container :nth-child(1) {
+      background-color: #E3ABB3;
+      /* height: 80px; */
+      /* order: 1; */
+      /* flex-grow: 33; */
+      /* flex-shrink: 0; */
+    }
+    .container :nth-child(2) {
+      background-color: #9DC54B;
+      /* flex-grow: 66; */
+      /* flex-shrink: 0; */
+      /* order: 0; */
+    }
+    .container :nth-child(3) {
+      background-color: #1FBEE7;
+      /* order: 2; */
+      /* flex-shrink: 6; */
+      /* flex-grow: 33; */
+    }
+    .container :nth-child(4) {
+      background-color: #218BCC;
+      /* order: 3; */
+      /* align-self: flex-end; */
+    }
+    .container :nth-child(5) {
+      background-color: #6695D3;
+      /* order: -1; */
+    }
+    .container :nth-child(6) {
+      background-color: #CFD841;
+    }
+    .container :nth-child(7) {
+      background-color: #F1B605;
+    }
+    .container :nth-child(8) {
+      background-color: #E3ABB3;
+    }
+    .container :nth-child(9) {
+      background-color: #9DC54B;
+    }
+  </style>
+</body>
+</html>
